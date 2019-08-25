@@ -51,6 +51,7 @@ class WhastappView(APIView):
 
     def post(self, request,   format=None):
         try:                        
+            print (request.data)
             serializer = WhatsappSerializer(data=request.data) 
             print ('in post')                                   
             if serializer.is_valid():
